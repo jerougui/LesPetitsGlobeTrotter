@@ -10,10 +10,13 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/album/">
 
+
     
 
-    <!-- Bootstrap core CSS -->
-<link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Bootstrap core CSS -->
+      <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Custom styles for this template -->
+      <link href="data/carousel.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -85,16 +88,15 @@
 
   <div class="album py-5 bg-light">
     <div class="container">
-
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         <div class="col">
           <div class="card shadow-sm">
-		  <img src="data/pexels-life-of-pix-2469.jpg" class="card-img-top"  width="100%" height="280px"  alt="suivez-nous">             
+		  <img src="data/travaux.jpg" class="card-img-top"  width="100%" height="280px"  alt="suivez-nous">             
             <div class="card-body">
               <p class="card-text">Avancement des travaux de construction</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Consulter</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href='#travauxImages';">Consulter</button>
                   <button type="button" class="btn btn-sm btn-outline-secondary">Info</button>
                 </div>
                 <small class="text-muted">9 mins</small>
@@ -102,136 +104,46 @@
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card shadow-sm">            
-			<img src="data/pexels-los-muertos-crew-8460046.jpg" class="card-img-top"   width="100%" height="280px" alt="suivez-nous"> 
-            <div class="card-body">
-              <p class="card-text">Activités extérieurs.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Consulter</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Editer</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="data/pexels-cottonbro-3661352.jpg" class="card-img-top" alt="suivez-nous"> 
-
-            <div class="card-body">
-              <p class="card-text">Apprendre le langage et le gestuelle.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Consulter</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Editer</button>
-                </div>
-                <small class="text-muted">50 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="data/pexels-sharon-mccutcheon-1148998.jpg" class="card-img-top"  width="100%" height="280px" alt="activites"> 
-
-            <div class="card-body">
-              <p class="card-text">Decouverte du monde.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Consulter</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Editer</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-		  <img src="data/pexels-piya-nimityongskul-2883510.jpg" class="card-img-top"  width="100%" height="280px" alt="activites">             
-            <div class="card-body">
-              <p class="card-text">Activités manuelle.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Consulter</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Editer</button>
-                </div>
-                <small class="text-muted">14h</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-		  <img src="data/pexels-ketut-subiyanto-4473569.jpg" class="card-img-top"  width="100%" height="280px" alt="activites">    
-            
-
-            <div class="card-body">
-              <p class="card-text">Activités relaxantes.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Consulter</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Editer</button>
-                </div>
-                <small class="text-muted">3h 54mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-		  <img src="data/pexels-yan-krukov-8612894.jpg" width="100%" height="280px" class="card-img-top" alt="activites">                
-            <div class="card-body">
-              <p class="card-text">Parcours de santé.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Consulter</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">3h 30 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-		  <img src="data/pexels-yan-krukov-8613318.jpg" class="card-img-top"  width="100%" height="280px" alt="activites">    
-            
-            <div class="card-body">
-              <p class="card-text">La vie de micro-crèche des petits voyageurs.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Consulter</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Editer</button>
-                </div>
-                <small class="text-muted">59 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="data/pexels-gustavo-fring-4172988.jpg" class="card-img-top" alt="activites"> 
-
-            <div class="card-body">
-              <p class="card-text">Nos personnelles qui accompagnent vos enfants.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Consulter</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Editer</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+        <!-- add card here-->
     </div>
+        <!-- START THE FEATURETTES -->
+        <hr class="featurette-divider">
+        <h1 id ="travauxImages" class="display-4 font-italic">Avancement travaux ...</h1>
+        <!-- START CAROUSEL-->
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <img class="d-block w-100" src="data/travaux_01.jpg" alt="First slide">
+                  <div class="carousel-caption d-none d-md-block">
+                      <h5>Construction en cours ...</h5>
+                      <p>Travaux en bonne voie malgré les conditions climatiques rudes.</p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <img class="d-block w-100" src="data/travaux_02.jpg" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                  <img class="d-block w-100" src="data/travaux_03.jpg" alt="Third slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="data/travaux_00.jpg" alt="Third slide">
+            </div>              
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Précédent</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Suivant</span>
+          </a>
+      </div>
+        <!-- END CAROUSEL-->
   </div>
 
 </main>
@@ -246,9 +158,13 @@
   </div>
 </footer>
 
+    <!-- Custom styles for this template -->
+    <link href="data/carousel.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
 
-      
   </body>
 </html>
