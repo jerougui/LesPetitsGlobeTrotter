@@ -2,169 +2,163 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="Consulterport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.87.0">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
     <title>Galerie photos</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/album/">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/album/">
 
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
 
-    
-
-      <!-- Bootstrap core CSS -->
-      <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
-      <!-- Custom styles for this template -->
-      <link href="data/carousel.css" rel="stylesheet">
-
+    <!-- Custom styles for this template -->
+    <link href="./css/album.css" rel="stylesheet">
     <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
       @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
+      .carousel-multi-item-2 .col-md-3 {
+        float: left;
+        width: 25%;
+        max-width: 100%;
+      }
+    }
+      .carousel-multi-item-2 .card img {
+        border-radius: 2px;
       }
     </style>
-
-    
   </head>
+
   <body>
-    
-<header>
-  <div class="collapse bg-dark" id="navbarHeader">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 col-md-7 py-4">
-          <h4 class="text-white">A propos</h4>
-          <p class="text-muted">Galerie photos sera mis à jour au fil d'activités de manière quotidienne, l'accès à la galerie sera personnalisé via un compte utilisateur.</p>
-        </div>
-        <div class="col-sm-4 offset-md-1 py-4">
-          <h4 class="text-white">Contact</h4>
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-white">Twitter</a></li>
-            <li><a href="#" class="text-white">Facebook</a></li>
-            <li><a href="#claire.rougui@gmail.com" class="text-white">Email</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="navbar navbar-dark bg-dark shadow-sm">
-    <div class="container">
-      <a href="#" class="navbar-brand d-flex align-items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" ConsulterBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-        <strong>Album</strong>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </div>
-  </div>
-</header>
 
-<main>
-
-  <section class="py-5 text-center container">
-    <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Les Petits-GlobeTrotters en images</h1>
-        <p class="lead text-muted">Activités à venir</p>
-        <marquee class="lead text-muted col-md-8" behavior="scroll">Travaux de construction bien entamés depuis la fin 2022, vous pouvez suivre les avancements des travaux au fil de l'eau</marquee>
-        <p>
-          <a href="./index.html" class="btn btn-primary my-2"> Accueil micro-crèche</a>
-          <a href="./index.html" class="btn btn-secondary my-2">Se connecter</a>
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <div class="album py-5 bg-light">
-    <div class="container">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="col">
-          <div class="card shadow-sm">
-		  <img src="data/travaux.jpg" class="card-img-top"  width="100%" height="280px"  alt="suivez-nous">             
-            <div class="card-body">
-              <p class="card-text">Avancement des travaux de construction</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href='#travauxImages';">Consulter</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Info</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
+    <header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">A propos</h4>
+              <p class="text-muted">Galerie photos sera mis à jour au fil d'activités de manière quotidienne, l'accès à la galerie sera personnalisé via un compte utilisateur.</p>              
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">Contact</h4>
+              <ul class="list-unstyled">
+                <li><a href="https://m.facebook.com/people/Les-petits-globetrotters/100083195057633/" class="text-white">Facebook</a></li>
+                <li><a href="#claire.rougui@gmail.com" class="text-white">Email</a></li>
+              </ul>
             </div>
           </div>
         </div>
-        <!-- add card here-->
-    </div>
-        <!-- START THE FEATURETTES -->
-        <hr class="featurette-divider">
-        <h1 id ="travauxImages" class="display-4 font-italic">Avancement travaux ...</h1>
-        <!-- START CAROUSEL-->
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner">
-              <div class="carousel-item active">
-                  <img class="d-block w-100" src="data/travaux_01.jpg" alt="First slide">
-                  <div class="carousel-caption d-none d-md-block">
-                      <h5>Construction en cours ...</h5>
-                      <p>Travaux en bonne voie malgré les conditions climatiques rudes.</p>
-                  </div>
-              </div>
-              <div class="carousel-item">
-                  <img class="d-block w-100" src="data/travaux_02.jpg" alt="Second slide">
-              </div>
-              <div class="carousel-item">
-                  <img class="d-block w-100" src="data/travaux_03.jpg" alt="Third slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="data/travaux_00.jpg" alt="Third slide">
-            </div>              
-          </div>
-          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Précédent</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Suivant</span>
-          </a>
       </div>
-        <!-- END CAROUSEL-->
-  </div>
+      <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+            <strong>Album</strong>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
 
-</main>
+    <main role="main">
 
-<footer class="text-muted py-5">
-  <div class="container">
-    <p class="float-end mb-1">
-      <a href="#">Haut de la page</a>
-    </p>
-    <p class="mb-1">&copy; Les Petits GlobeTrotters. Sources photos <a href="https://www.pexels.com/fr-fr/license/"> libre de droits voir licence pexels</a>  Cette page est un exemple du fil d'activités en images portant aussi les nouveautés vie quotidienne et logistique de votre micro-crèche </p> <br>
-    <p class="mb-0">Nouvelle de Les Petits GlobeTrotters<a href="./index.html">Accéder à la page d'accueil</a> ou lire la rubrique d'aide <a href="./aide.html">aide</a>.</p>
-  </div>
-</footer>
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Les Petits-GlobeTrotters en images</h1>
+          <p class="lead text-muted">Activités à venir.</p>
+          <marquee class="lead text-muted col-md-8" behavior="scroll">Travaux de construction bien entamés depuis la fin 2022, vous pouvez suivre les avancements des travaux au fil de l'eau</marquee>
+          <p>
+            <a href="./index.html" class="btn btn-primary my-2"> Accueil micro-crèche</a>
+          </p>
+        </div>
+      </section>
 
-    <!-- Custom styles for this template -->
-    <link href="data/carousel.css" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <div class="album py-5 bg-light">
+        <div class="container">
 
-    <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                  <img src="data/travaux.jpg" class="card-img-top"  width="100%" height="280px"  alt="suivez-nous">             
+                  <div class="card-body">
+                  <p class="card-text">Avancement des travaux de construction</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href='#travauxImages';">Consulter</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+         
+          </div>
+        </div>
+      </div>
 
+      <section class="jumbotron text-center">
+          <!-- START THE FEATURETTES -->
+          <hr class="featurette-divider">
+          <h1 id ="travauxImages" class="display-4 font-italic">Avancement travaux ...</h1>
+          <!-- START CAROUSEL-->
+              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="data/travaux_01.jpg" alt="First slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Construction en cours ...</h5>
+                            <p>Travaux en bonne voie malgré les conditions climatiques rudes.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="data/travaux_02.jpg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="data/travaux_03.jpg" alt="Third slide">
+                    </div>
+                    <div class="carousel-item">
+                      <img class="d-block w-100" src="data/travaux_00.jpg" alt="Third slide">
+                  </div>              
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Précédent</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Suivant</span>
+                </a>
+            </div>
+          <!-- END CAROUSEL-->
+   <!--/.Carousel Wrapper-->
+      </section>
+
+    </main>
+
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+        <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/holder.min.js"></script>
   </body>
 </html>
