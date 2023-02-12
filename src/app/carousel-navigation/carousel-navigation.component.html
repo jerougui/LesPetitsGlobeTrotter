@@ -1,0 +1,31 @@
+<ngb-carousel
+	*ngIf="images"
+	[showNavigationArrows]="showNavigationArrows"
+	[showNavigationIndicators]="showNavigationIndicators">
+	<ng-template ngbSlide *ngFor="let image of images">
+		<div class="carousel-item active">
+			<img [src]="image" class="d-block w-100"  alt="Random slide" />
+		</div>
+		<!--
+		<div class="carousel-caption">
+			<h3>No mouse navigation</h3>
+			<p>This carousel hides navigation arrows and indicators.</p>
+		</div>
+		-->
+	</ng-template>
+</ngb-carousel>
+
+<hr />
+
+<div class="btn-group" role="group" aria-label="Carousel toggle controls">
+	<button type="button" (click)="showNavigationArrows = !showNavigationArrows" class="btn btn-outline-dark btn-sm">
+		Toggle navigation arrows
+	</button>
+	<button
+		type="button"
+		(click)="showNavigationIndicators = !showNavigationIndicators"
+		class="btn btn-outline-dark btn-sm"
+	>
+		Toggle navigation indicators
+	</button>
+</div>
