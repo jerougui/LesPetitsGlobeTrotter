@@ -10,22 +10,26 @@ import { BannerService } from '../banner.service';
 export class NavHomeComponent implements OnInit {
   titles : string[] = [
         "Bienvenue chez les Petits Globetrotters !",
-        "Les Petits-GlobeTrotters en images"
+        "Les Petits Globetrotters  en images",
+        "Contactez Les Petits Globetrotters"
   ]; 
 
   descriptions : string[] = [
     "La micro-crèche Les Petits Globetrotters est une structure privée qui peut accueillir 12 enfants simultanément (âgés de 2.5 mois à 4 ans) du lundi ou vendredi de 7h15 à 18h45. Les enfants des Sorinières mais également des autres communes seront les bienvenus ! ",
-    "Travaux de construction bien entamés depuis la fin 2022, vous pouvez suivre les avancements des travaux au fil de l'eau"
+    "Travaux de construction bien entamés depuis la fin 2022, vous pouvez suivre les avancements des travaux au fil de l'eau",
+    "Formulaire de contact pour toute question, demande d’information ou demande de pré-inscription"
   ];
 
   uris : string[] = [
     "/#decouvrirLink",
-    "album-component#travauxImages"
+    "album-component#travauxImages",
+    "contact-component#contact-form"
   ] 
 
   uriDescs : string[] = [
     "Continuer la lecture...",
-    "Consulter"
+    "Consulter",
+    "Contacter"
   ];
 
 

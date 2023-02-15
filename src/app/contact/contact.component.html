@@ -1,77 +1,112 @@
+<div class="container"> 
+  <div class="jumbotron p-3 p-md-5 text-black rounded bg-light" style="margin-top: 30px;" *ngIf="isEmailSendSuccess">
+    <div class="col-md-10 px-0">
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-sm"> 
+            <br>
+            <img src="../../assets/images/send-message.png" class="img-fluid" alt="..." width="60" height="60"/>                                   
+          </div>
+          <div class="col-sm">
+            <br>
+            <h3 class="display-4 font-italic">Votre demande a été bien transmise !</h3>
+          </div>
+        </div>
+      </div>     
+      <p class="lead my-3">Un email de confirmation vous a été envoyé, vérifiez votre boite à lettre !</p>
+        <p class="lead mb-0"><a class="btn btn-secondary" (click)="showFormulaire()">Envoyer une autre demande</a></p>      
+    </div>
+  </div>
 
-<div class="container">
-    <h2 class="featurette-heading">Contactez <span class="text-muted"> nous</span></h2>
-    <p class="lead">Formulaire de contact pour toute question, demande d’information ou demande de pré-inscription :<br><br></p>
-    <marquee><p class="lead text-danger">La fonctionnalité contact via le formulaire n'est pas encore disponible !</p></marquee>
+
+    <!-- <marquee><p class="lead text-danger">La fonctionnalité contact via le formulaire n'est pas encore disponible !</p></marquee> -->
       <div class="row">
   
         <div class="col-lg-8 col-lg-offset-2">
+            
+          <form id="contact-form" [formGroup]="registerForm"  method="post" action="" role="form" *ngIf="!isEmailSendSuccess && !showContact">
   
-          
-          <form id="contact-form" method="post" action="" role="form">
-  
-          <div class="messages lead"></div>
-  
-          <div class="controls">
-  
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <br>
-                  <label for="form_name">Nom *</label>
-                  <input id="form_name" type="text" name="name" class="form-control" placeholder="Merci de saisir votre nom *" required="required" data-error="Nom est requis.">
-                  <div class="help-block with-errors"></div>
+            <div class="messages lead"></div>
+    
+            <div class="controls">
+    
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <br>
+                    <label for="form_name">Nom *</label>
+                    <input id="form_name" type="text" [(ngModel)]="dataset.name" placeholder="Merci de saisir votre nom *"
+                          formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f?.firstName?.errors }" />
+                      <div *ngIf="submitted && f?.firstName?.errors" class="invalid-feedback">
+                        <div *ngIf="f?.firstName?.errors?.required">Nom est requis !</div>
+                      </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <br>
+                    <label for="form_lastname">Prénom *</label>
+                    <input id="form_lastname" type="text" [(ngModel)]="dataset.prenom" name="prenom" class="form-control" placeholder="Merci de saisir votre prénom *" required="required" data-error="prénom est requis."
+                      formControlName="fprenom" class="form-control" [ngClass]="{ 'is-invalid': submitted && f?.fprenom?.errors }" />
+                    <div *ngIf="submitted && f?.fprenom?.errors" class="invalid-feedback">
+                      <div *ngIf="f?.fprenom?.errors?.required">Prénom est requis !</div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <br>
-                  <label for="form_lastname">Prénom *</label>
-                  <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Merci de saisir votre prénom *" required="required" data-error="prénom est requis.">
-                  <div class="help-block with-errors"></div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <br>
+                    <label for="form_email">Email *</label>
+                    <input id="form_email" type="email" [(ngModel)]="dataset.email"  name="email" class="form-control" placeholder="Merci de saisir votre email *" formControlName="femail" [ngClass]="{ 'is-invalid': submitted && f?.femail?.errors }">
+                    <div *ngIf="submitted && f?.femail?.errors" class="invalid-feedback">
+                      <div *ngIf="f?.femail?.errors?.required">Une adresse E-mail est obligatoire !</div>
+                      <div *ngIf="f?.femail?.errors?.email">L'adresse email n'est pas correcte</div>
+                  </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <br>
+                    <label for="form_phone">Téléphone</label>
+                    <input id="form_phone" type="tel" [(ngModel)]="dataset.tel" name="tel" class="form-control" placeholder="Merci de saisir votre phone"
+                      formControlName="ftel" class="form-control" [ngClass]="{ 'is-invalid': submitted && f?.ftel?.errors }" />
+                    <div *ngIf="submitted && f?.ftel?.errors" class="invalid-feedback">
+                      <div *ngIf="f?.ftel?.errors?.required">Un numéro téléphone est recommandé !</div>
+                    </div>
+                  </div>
                 </div>
               </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <br>
+                    <label for="form_message">Message *</label>
+                    <textarea id="form_message" [(ngModel)]="dataset.message" name="message" class="form-control" placeholder="Votre message ici*" rows="4" required data-error="Merci de nous laisser un message."
+                      formControlName="fmessage" class="form-control" [ngClass]="{ 'is-invalid': submitted && f?.fmessage?.errors }"></textarea>
+                    <div *ngIf="submitted && f?.fmessage?.errors" class="invalid-feedback">
+                      <div *ngIf="f?.fmessage?.errors?.required">N'oubliez pas de nous laisser votre message :) !</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <br>
+                  <input type="submit" (click)="onSubmit()" class="btn btn-success btn-send" value="Envoyer message" *ngIf="!isSendingEmail">
+                  <div class="spinner-border" role="status" *ngIf="spinnerService.visibility | async">
+                  </div>
+
+                </div>
+              </div>
+             
             </div>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <br>
-                  <label for="form_email">Email *</label>
-                  <input id="form_email" type="email" name="email" class="form-control" placeholder="Merci de saisir votre email *" required="required" data-error="Valid email est required.">
-                  <div class="help-block with-errors"></div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <br>
-                  <label for="form_phone">Téléphone</label>
-                  <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Merci de saisir votre phone">
-                  <div class="help-block with-errors"></div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-                <div class="form-group">
-                  <br>
-                  <label for="form_message">Message *</label>
-                  <textarea id="form_message" name="message" class="form-control" placeholder="Votre message ici*" rows="4" required data-error="Merci de nous laisser un message."></textarea>
-                  <div class="help-block with-errors"></div>
-                </div>
-              </div>
-              <div class="col-md-12">
-                <br>
-                <input type="submit" class="btn btn-success btn-send disabled" value="Envoyer message">
-              </div>
-            </div>
-           
-          </div>
-          </form>
+            </form>
   
         <!--Grid column-->
         </div>
           <!--Grid column-->
-          <div class="col-md-3 text-center">
+          <div class="col-md-8 text-center" *ngIf="showContact">
+            <p class="alert alert-warning">Oops ... Une erreur s'est produite lors d'envois du formulaire ! voici nos cordonnées pour nous joindre : <br></p>
             <ul class="list-unstyled mb-0">
                 <li><i class="fas fa-map-marker-alt fa-2x"></i>
                     <p>2 A impasse du Moulin des Landes 44840 Les Sorinières</p>

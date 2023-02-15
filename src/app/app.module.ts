@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AideComponent } from './aide/aide.component';
@@ -15,6 +18,8 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { BannerComponent } from './banner/banner.component';
 import { CarouselNavigationComponent } from './carousel-navigation/carousel-navigation.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {CustomHttpInterceptor } from './http-interceptor';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,15 +37,21 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
     CarouselNavigationComponent,
+    ReactiveFormsModule,   
     RouterModule.forRoot([
       {path: 'accueil-component', component: AccueilComponent},
       {path: 'album-component', component: AppComponent},
+      { path: 'contact-component', component: ContactComponent}
     ]),
     NgbModule,
   ],
   exports: [CarouselNavigationComponent],
-  providers: [CarouselNavigationComponent],
+  providers: [
+    CarouselNavigationComponent,
+    CustomHttpInterceptor],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

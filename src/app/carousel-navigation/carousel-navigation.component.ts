@@ -14,7 +14,7 @@ import { NgIf, NgFor} from '@angular/common';
 export class CarouselNavigationComponent {
 	showNavigationArrows = true;
 	showNavigationIndicators = true;
-	images = [0, 2, 3, 4, 5].map((n) => `https://141.145.205.182/assets/images/travaux_0${n}.jpg`);
+	images = [0, 2, 3, 4, 5].map((n) => `./assets/images/travaux_0${n}.jpg`);
 
 	constructor(config: NgbCarouselConfig) {
 		// customize default values of carousels used by this component tree
